@@ -1,0 +1,870 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-image: linear-gradient(#05465e, #022b3a);
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  width: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#logo {
+  display: block;
+  margin: 30pt auto;
+  width: 180px;
+  text-align: center;
+}
+
+nav {
+  position: sticky;
+  top: 30pt;
+  left: 50pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+main {
+  margin: 0 33px 50px 120px;
+  height: 900px;
+}
+
+a,
+li {
+  display: flex;
+  flex-direction: row;
+  font-family: "Amatic SC", cursive;
+  font-size: 22pt;
+  list-style: none;
+  text-decoration: none;
+  color: #2da24e;
+  align-items: center;
+}
+
+#welcome {
+  margin-top: 50px;
+}
+
+#home-icon,
+#profile-icon,
+#search-icon,
+#about-icon {
+  width: 35px;
+  margin: 15px;
+}
+
+#about-icon {
+  margin: 10px 35px 10px 23px;
+}
+
+#home-icon {
+  margin-right: 35px;
+  margin-left: 15px;
+}
+
+#profile-icon {
+  margin-left: 20pt;
+}
+
+#search-icon {
+  margin-left: 25pt;
+  margin-right: 25pt;
+}
+
+#trashcan-icon {
+  width: 25px;
+}
+
+#home-text:hover,
+#profile-text:hover,
+#search-text:hover,
+#about-text:hover {
+  color: #2da24e;
+}
+
+#login-text {
+  margin-left: 0;
+}
+
+#profile-text {
+  padding-left: 15pt;
+}
+
+button {
+  background-color: transparent;
+  border-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 10pt;
+  align-items: center;
+}
+
+.buttons {
+  margin: 15pt;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Lettermark */
+h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 34pt;
+  color: #e0e2db;
+}
+
+/* Slogan */
+h2 {
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 18pt;
+  color: #13b5d2;
+}
+
+/* Nav Links, Post Title, City */
+h3 {
+  font-family: "Amatic SC", cursive;
+  font-size: 22pt;
+  color: #e0e2db;
+}
+
+/* Post Details */
+h4,
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 12pt;
+  font-weight: 100;
+  color: #1a1a1a;
+  margin: 3pt;
+}
+
+/* User and Date */
+h5 {
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 16pt;
+  font-weight: 100;
+  color: #2da24e;
+  margin: 5pt;
+}
+
+section {
+  width: 600px;
+  margin: 40pt;
+  margin-bottom: 0;
+  border-radius: 8pt;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 35px rgb(19, 19, 19);
+}
+
+section.detail {
+  margin-top: 20pt;
+}
+
+form,
+.dash,
+.about {
+  width: 700px;
+  margin: 40pt;
+  margin-top: 200pt;
+  border-radius: 8pt;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 35px rgb(19, 19, 19);
+}
+
+#deleteform:hover {
+  border: 2px solid transparent;
+}
+
+.dash {
+  margin-top: 150pt;
+}
+
+section:hover,
+form:hover {
+  border: 2px solid #13b5d2;
+  box-shadow: 0 5px 30px rgb(6, 6, 6);
+}
+
+.post_header,
+.title_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(118, 95, 71);
+  padding: 15px 20px;
+  border-radius: 8pt 8pt 0 0;
+}
+
+.content_body {
+  display: flex;
+  flex-direction: row;
+  align-content: left;
+  background-color: #e0e2db;
+  border-radius: 0 0 8pt 8pt;
+  text-align: left;
+}
+
+#about-content {
+  align-content: center;
+  border-radius: 0 0 8pt 8pt;
+  text-align: left;
+  padding: 25px;
+  background-color: #e0e2db;
+  border-radius: 0 0 8pt 8pt;
+}
+
+.detail .content_body {
+  padding: 0 0 0 10pt;
+}
+
+.detail .post_title {
+  margin: 5pt auto;
+}
+
+.form_body {
+  padding: 15pt;
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+  background-color: #e0e2db;
+  text-align: left;
+  border-radius: 0 0 8pt 8pt;
+}
+
+.dash_body {
+  padding: 15pt;
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+  background-color: #e0e2db;
+  align-items: center;
+  border-radius: 0 0 8pt 8pt;
+}
+
+/* IMAGE displayed on home page listing brief */
+.post_image {
+  width: 200px;
+  height: auto;
+  border-radius: 0 0 0 7pt;
+}
+
+.content {
+  padding: 10pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#amount-text {
+  margin-top: 10pt;
+}
+
+#description {
+  max-width: 350px;
+}
+
+.user_date {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 5pt;
+}
+
+#username,
+#date {
+  margin: 0 0 0 5pt;
+}
+
+input {
+  margin-bottom: 25px;
+  height: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+  font-weight: 100;
+  color: #1a1a1a;
+  align-items: top;
+  padding-left: 10pt;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  outline-color: rgb(109, 191, 254);
+}
+
+#loginBtn,
+#signupBtn,
+#createBtn,
+#saveBtn,
+#deleteBtn {
+  background-color: rgb(109, 191, 254);
+  width: 200px;
+  margin-left: 170pt;
+  margin-top: 20pt;
+  text-align: center;
+  justify-content: center;
+  padding: 5pt;
+  border: 2px solid transparent;
+}
+
+#loginOrProfileBtn,
+#searchBtn,
+#homeBtn {
+  margin: 0;
+}
+
+#dash_body h4 {
+  text-align: left;
+}
+
+#createBtn,
+#saveBtn,
+#deleteBtn {
+  margin: 20pt auto;
+}
+
+.dash #deleteBtn {
+  background: none;
+  width: 50px;
+}
+
+.dash #deleteBtn:hover {
+  border: none;
+}
+
+.dash #createBtn {
+  margin-top: 30pt;
+}
+
+#loginBtn:hover,
+#signupBtn:hover {
+  border: 2px solid #2da24e;
+}
+
+#deleteBtn {
+  background-color: none;
+}
+
+.user_posts {
+  background-color: white;
+  width: 500px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  margin: 10pt;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10pt;
+  border: 2pt solid transparent;
+}
+
+.user_posts .post_title {
+  margin-right: 20px;
+}
+
+#trashcan {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#your_posts {
+  margin-left: -560px;
+  margin-bottom: 10pt;
+}
+
+.post_title {
+  color: #2da24e;
+  margin-left: 5pt;
+}
+
+#createBtn:hover,
+#saveBtn:hover,
+#deleteBtn:hover {
+  border: 2px solid #2da24e;
+}
+
+#logout h3:hover {
+  color: #2da24e;
+}
+
+.user_posts:hover {
+  box-shadow: 0 8px 10px rgb(173, 173, 173);
+}
+
+.create,
+.detail {
+  border: none;
+  margin: 60px 30px;
+  /* margin-bottom: 100pt; */
+}
+
+.create #saveBtn,
+.create #deleteBtn {
+  margin-bottom: 0;
+}
+
+.login_form {
+  border: none;
+}
+
+select {
+  width: 200px;
+  height: 35px;
+  margin-bottom: 20pt;
+  padding-right: 5pt;
+  cursor: pointer;
+}
+
+textarea {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+  font-weight: 100;
+  color: rgb(19, 19, 19);
+  padding: 10pt;
+  resize: none;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 15pt;
+}
+
+textarea:hover,
+textarea:enabled,
+select:enabled {
+  outline-color: rgb(109, 191, 254);
+}
+
+::placeholder {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+  font-weight: 100;
+  color: #9f9f9f;
+}
+
+#material-location {
+  height: 40px;
+}
+
+#material-contact {
+  margin-bottom: 0;
+}
+
+#photo-selection::-webkit-file-upload-button {
+  display: block;
+  content: "Choose photo";
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+  font-weight: 100;
+  color: #9f9f9f;
+  width: 120px;
+  height: 35px;
+  margin-bottom: 10pt;
+  cursor: pointer;
+  text-align: left;
+  border: 1px solid rgb(114, 114, 114);
+  margin-left: -10pt;
+  border-radius: 2pt;
+}
+
+/* IMAGE displayed in listing detail view */
+#post-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* background-size: cover;
+  background-position: center; */
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+#trash-icon {
+  height: 50px;
+}
+
+form.create {
+  margin-bottom: 50px;
+}
+
+#map {
+  display: block;
+  height: 420px;
+  width: 300px;
+  margin-left: 5px;
+  border-radius: 0 0 8pt 0;
+}
+
+#material_image_container {
+  background-color: #e0e2db;
+  margin-top: 0;
+}
+
+.detail .content_body {
+  justify-content: space-between;
+}
+
+.detail:hover,
+.create:hover,
+.login_form:hover {
+  border: none;
+}
+
+button #postBtn {
+  width: auto;
+}
+
+.search {
+  margin: 80px 33px;
+  box-shadow: 0 8px 35px rgb(19, 19, 19);
+}
+
+.content_body .post_title {
+  margin-top: 15px;
+}
+
+.materials-icons {
+  height: 100px;
+}
+
+#search-field {
+  display: flex;
+  flex-direction: row;
+  padding-right: 15px;
+}
+
+.search-button h2:hover {
+  color: #2da24e;
+}
+
+.search-button img {
+  margin-right: 20pt;
+}
+
+.search-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button.search-button {
+  margin-top: 25px;
+}
+
+#plastic-icon {
+  width: 130px;
+  margin-right: 35px;
+}
+
+#glass-icon {
+  width: 130px;
+  margin-right: 35px;
+}
+
+#search-glass {
+  margin-top: 45px;
+}
+
+#aluminum-icon {
+  width: 90px;
+  margin-left: 10px;
+  margin-right: 65px;
+}
+
+#search-aluminum {
+  margin-top: 40px;
+}
+
+#textiles-icon {
+  width: 85px;
+  margin-left: 15px;
+  margin-right: 65px;
+}
+
+#search-textiles {
+  margin-top: 35px;
+}
+
+#cardboard-icon {
+  width: 110px;
+  margin-left: 5px;
+  margin-right: 50px;
+}
+
+#search-cardboard {
+  margin-top: 25px;
+}
+
+#paper-icon {
+  width: 90px;
+  margin-left: 10px;
+  margin-right: 65px;
+}
+
+#search-paper {
+  margin-top: 30px;
+}
+
+#electronics-icon {
+  width: 100px;
+}
+
+#search-electronics {
+  margin-top: 15px;
+}
+
+#batteries-icon {
+  width: 70px;
+  margin-left: 20px;
+  margin-right: 35px;
+}
+
+#search-batteries {
+  margin-top: 40px;
+}
+
+#appliances-icon {
+  width: 70px;
+  margin-left: 20px;
+  margin-right: 35px;
+}
+
+#search-appliances {
+  margin-top: 40px;
+}
+
+#steel-icon {
+  height: 85px;
+  margin-left: 25px;
+  margin-right: 40px;
+}
+
+#search-steel {
+  margin-top: 22px;
+}
+
+#concrete-icon {
+  width: 60px;
+  margin-left: 25px;
+  margin-right: 40px;
+}
+
+#search-concrete {
+  margin-top: 20px;
+}
+
+#oil-icon {
+  width: 50px;
+  margin-left: 25px;
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    justify-content: space-around;
+  }
+
+  nav {
+    position: static;
+  }
+
+  body {
+    flex-direction: column;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  .buttons {
+    margin: 0;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #your_posts {
+    margin-left: -460px;
+  }
+
+  .search,
+  .dash,
+  .about {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section,
+  form,
+  .dash,
+  .search,
+  .create,
+  .about,
+  .login_form,
+  .signup_form {
+    margin: 20pt;
+    width: 350px;
+  }
+
+  #your_posts {
+    margin-left: -280px;
+  }
+
+  .user_posts {
+    width: 300px;
+  }
+
+  #search-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #electronics-icon {
+    margin-right: 65px;
+  }
+
+  #batteries-icon {
+    margin-right: 75px;
+  }
+
+  #appliances-icon {
+    margin-right: 75px;
+  }
+
+  #steel-icon {
+    margin-right: 80px;
+  }
+
+  #concrete-icon {
+    margin-right: 80px;
+  }
+
+  #oil-icon {
+    margin-right: 90px;
+  }
+
+  #home-icon {
+    margin-right: 10pt;
+  }
+
+  #profile-icon {
+    width: 30px;
+    margin: 0;
+  }
+
+  #search-icon {
+    margin-right: 10pt;
+    margin-left: 0pt;
+  }
+
+  #profile-text {
+    padding-left: 10pt;
+  }
+
+  h4 {
+    font-size: 10pt;
+  }
+
+  h5 {
+    font-size: 12pt;
+  }
+
+  .detail .post_title {
+    margin-top: 5pt;
+  }
+
+  #logo {
+    width: 120px;
+  }
+
+  .user_date {
+    justify-content: flex-start;
+    flex-direction: column;
+    /* margin-top: 5pt; */
+  }
+
+  .detail .content_body {
+    padding: 0 0 0 5px;
+  }
+
+  .buttons {
+    justify-content: center;
+    margin-right: 8px;
+  }
+
+  #home-icon,
+  #profile-icon,
+  #search-icon,
+  #about-icon {
+    width: 25px;
+    margin-left: 10px;
+  }
+
+  #about-icon {
+    margin: 10px 10px 10px 0;
+  }
+
+  #home-icon,
+  #search-icon {
+    margin-right: 10px;
+  }
+
+  #search-icon {
+    margin-left: 20px;
+  }
+
+  #home-text,
+  #profile-text,
+  #search-text,
+  #about-text {
+    font-size: 16pt;
+  }
+
+  #home-text {
+    margin-right: 10px;
+  }
+
+  #profile-text {
+    margin-left: 0;
+  }
+
+  #map {
+    width: 260px;
+    height: 350px;
+  }
+
+  #Btn {
+    font-size: 16pt;
+  }
+
+  .form_body #loginBtn,
+  .form_body #signupBtn {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .content {
+    padding: 8px;
+  }
+
+  #logout h3 {
+    font-size: 16pt;
+  }
+
+  .post_image {
+    width: 170px;
+  }
+}
