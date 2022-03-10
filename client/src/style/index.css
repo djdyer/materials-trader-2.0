@@ -25,18 +25,11 @@ body {
 }
 
 nav {
-  position: sticky;
-  top: 30pt;
-  left: 50pt;
+  margin: 50px 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
-}
-
-main {
-  margin: 0 33px 50px 120px;
-  height: 900px;
 }
 
 a,
@@ -51,34 +44,12 @@ li {
   align-items: center;
 }
 
-#welcome {
-  margin-top: 50px;
-}
-
 #home-icon,
 #profile-icon,
 #search-icon,
 #about-icon {
   width: 35px;
   margin: 15px;
-}
-
-#about-icon {
-  margin: 10px 35px 10px 23px;
-}
-
-#home-icon {
-  margin-right: 35px;
-  margin-left: 15px;
-}
-
-#profile-icon {
-  margin-left: 20pt;
-}
-
-#search-icon {
-  margin-left: 25pt;
-  margin-right: 25pt;
 }
 
 #trashcan-icon {
@@ -90,14 +61,6 @@ li {
 #search-text:hover,
 #about-text:hover {
   color: #2da24e;
-}
-
-#login-text {
-  margin-left: 0;
-}
-
-#profile-text {
-  padding-left: 15pt;
 }
 
 button {
@@ -113,7 +76,7 @@ button {
   margin: 15pt;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 
 /* Lettermark */
@@ -317,12 +280,6 @@ select:focus {
   border: 2px solid transparent;
 }
 
-#loginOrProfileBtn,
-#searchBtn,
-#homeBtn {
-  margin: 0;
-}
-
 #dash_body h4 {
   text-align: left;
 }
@@ -482,9 +439,8 @@ select:enabled {
   width: 100%;
   height: auto;
   object-fit: contain;
-  /* background-size: cover;
-  background-position: center; */
 }
+
 #contact {
   display: flex;
   flex-direction: column;
@@ -544,139 +500,9 @@ button #postBtn {
   padding-right: 15px;
 }
 
-.search-button h2:hover {
-  color: #2da24e;
-}
-
-.search-button img {
-  margin-right: 20pt;
-}
-
-.search-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-button.search-button {
-  margin-top: 25px;
-}
-
-#plastic-icon {
-  width: 130px;
-  margin-right: 35px;
-}
-
-#glass-icon {
-  width: 130px;
-  margin-right: 35px;
-}
-
-#search-glass {
-  margin-top: 45px;
-}
-
-#aluminum-icon {
-  width: 90px;
-  margin-left: 10px;
-  margin-right: 65px;
-}
-
-#search-aluminum {
-  margin-top: 40px;
-}
-
-#textiles-icon {
-  width: 85px;
-  margin-left: 15px;
-  margin-right: 65px;
-}
-
-#search-textiles {
-  margin-top: 35px;
-}
-
-#cardboard-icon {
-  width: 110px;
-  margin-left: 5px;
-  margin-right: 50px;
-}
-
-#search-cardboard {
-  margin-top: 25px;
-}
-
-#paper-icon {
-  width: 90px;
-  margin-left: 10px;
-  margin-right: 65px;
-}
-
-#search-paper {
-  margin-top: 30px;
-}
-
-#electronics-icon {
-  width: 100px;
-}
-
-#search-electronics {
-  margin-top: 15px;
-}
-
-#batteries-icon {
-  width: 70px;
-  margin-left: 20px;
-  margin-right: 35px;
-}
-
-#search-batteries {
-  margin-top: 40px;
-}
-
-#appliances-icon {
-  width: 70px;
-  margin-left: 20px;
-  margin-right: 35px;
-}
-
-#search-appliances {
-  margin-top: 40px;
-}
-
-#steel-icon {
-  height: 85px;
-  margin-left: 25px;
-  margin-right: 40px;
-}
-
-#search-steel {
-  margin-top: 22px;
-}
-
-#concrete-icon {
-  width: 60px;
-  margin-left: 25px;
-  margin-right: 40px;
-}
-
-#search-concrete {
-  margin-top: 20px;
-}
-
-#oil-icon {
-  width: 50px;
-  margin-left: 25px;
-  margin-right: 50px;
-}
-
 @media screen and (max-width: 1200px) {
   html {
     justify-content: space-around;
-  }
-
-  nav {
-    position: static;
   }
 
   body {
@@ -732,48 +558,6 @@ button.search-button {
     flex-direction: column;
   }
 
-  #electronics-icon {
-    margin-right: 65px;
-  }
-
-  #batteries-icon {
-    margin-right: 75px;
-  }
-
-  #appliances-icon {
-    margin-right: 75px;
-  }
-
-  #steel-icon {
-    margin-right: 80px;
-  }
-
-  #concrete-icon {
-    margin-right: 80px;
-  }
-
-  #oil-icon {
-    margin-right: 90px;
-  }
-
-  #home-icon {
-    margin-right: 10pt;
-  }
-
-  #profile-icon {
-    width: 30px;
-    margin: 0;
-  }
-
-  #search-icon {
-    margin-right: 10pt;
-    margin-left: 0pt;
-  }
-
-  #profile-text {
-    padding-left: 10pt;
-  }
-
   h4 {
     font-size: 10pt;
   }
@@ -800,30 +584,12 @@ button.search-button {
     padding: 0 0 0 5px;
   }
 
-  .buttons {
-    justify-content: center;
-    margin-right: 8px;
-  }
-
   #home-icon,
   #profile-icon,
   #search-icon,
   #about-icon {
     width: 25px;
-    margin-left: 10px;
-  }
-
-  #about-icon {
-    margin: 10px 10px 10px 0;
-  }
-
-  #home-icon,
-  #search-icon {
-    margin-right: 10px;
-  }
-
-  #search-icon {
-    margin-left: 20px;
+    margin: 10px;
   }
 
   #home-text,
@@ -831,14 +597,6 @@ button.search-button {
   #search-text,
   #about-text {
     font-size: 16pt;
-  }
-
-  #home-text {
-    margin-right: 10px;
-  }
-
-  #profile-text {
-    margin-left: 0;
   }
 
   #map {

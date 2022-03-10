@@ -103,3 +103,66 @@
 // }
 
 // export default ListingDetail;
+
+//================================================================
+
+// {
+/* <section class="detail">
+  <div class="title_header">
+    <h3 id="material">
+      {{listing.material.type}}
+    </h3>
+    <h3 id="city">
+      {{listing.location}}
+    </h3>
+  </div>
+  <div id="material_image_container">
+    <img id="post-image" src="/images/{{listing.material.type}}-upload.jpeg" />
+  </div>
+  <div class="content_body">
+    <div>
+      <h3 class="post_title">
+        DESCRIPTION:
+      </h3>
+      <h4 id="description">
+        {{listing.description}}
+      </h4>
+      <h3 class="post_title">
+        AMOUNT:
+      </h3>
+      <h4 id="amount">
+        {{listing.amount}}
+      </h4>
+      <h3 class="post_title">
+        LOCATION:
+      </h3>
+      <h4 id="location">
+        {{listing.location}}
+      </h4>
+      <h3 class="post_title">
+        CONTACT:
+      </h3>
+      <div id="contact">
+        <h4>
+          <b>
+            {{listing.user.username}}
+          </b>
+        </h4>
+        <h4>
+          {{listing.contact}}
+        </h4>
+      </div>
+    </div>
+    <div id="map">
+      {{! <img id='location-map' src='/images/map_test.png' /> }}
+    </div>
+  </div>
+</section>
+<script src="../js/map.js"></script>
+<script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-RuWSCkmZwh_RKF5GZKhWWkbbwVKkrdQ&callback=initMap"
+>
+</script> */
+// }
