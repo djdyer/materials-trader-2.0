@@ -3,7 +3,7 @@ import React from "react";
 function Listing({ listing }) {
   return (
     <>
-      <a id="listing" href="/listing/{{listing.id}}">
+      <a id="listing" href={`/listing/${listing.id}`}>
         <section>
           <div className="post_header">
             <h3 id="material">{listing.material.type}</h3>
