@@ -5,16 +5,22 @@ const userData = require("./userData");
 const listingData = require("./listingData");
 
 db.once("open", async () => {
-  await Material.deleteMany();
-  const insertMaterial = await User.insertMany(materialData);
+  try {
+    await Material.deleteMany();
+    await Material.create(materialData);
+
+    await User.deleteMany();
+    await User.create(userData);
+
+    await Listing.deleteMany();
+    await Listing.create(listingData);
+  } catch (err) {
+    console.log(err);
+    process.exit(1);
+  }
+
   console.log("materials seeded");
-
-  await User.deleteMany();
-  const insertUser = await User.insertMany(userData);
   console.log("users seeded");
-
-  await Listing.deleteMany();
-  const insertListing = await Listing.insertMany(listingData);
   console.log("listings seeded");
 
   process.exit();
