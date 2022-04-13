@@ -23,5 +23,5 @@ db.once("open", async () => {
   console.log("users seeded");
   console.log("listings seeded");
 
-  process.exit();
+  process.exit(0);
 });
