@@ -15,14 +15,6 @@ const typeDefs = gql`
     amount: String
     location: String
     user: String
-    contact: Float
-    bidsHistory: [Bid]
-    aircraft: String
-    flightNum: String
-    cabinSize: String
-    operator: String
-    termsConfirm: Boolean
-    latestBidUser: User
   }
 
   type Auth {
