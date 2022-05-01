@@ -15,14 +15,14 @@ const listingSchema = new Schema({
     type: String,
     required: true,
   },
-  user: {
+  user_Id: {
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  contact: {
-    type: String,
-    required: true,
-  },
+  // contact: {
+  //   type: String,
+  //   required: true,
+  // },
 });
 
 const Listing = mongoose.model("Listing", listingSchema);

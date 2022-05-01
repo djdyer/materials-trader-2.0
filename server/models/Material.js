@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const materialSchema = new Schema({
   material: {
-    type: Date,
+    type: String,
   },
   hazardous: {
     type: Boolean,
