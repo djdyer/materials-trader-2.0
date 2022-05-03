@@ -19,6 +19,12 @@ const listingSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
+  materials_Id: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Material'
+    },
+  ],
   // contact: {
   //   type: String,
   //   required: true,
