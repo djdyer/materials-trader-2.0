@@ -21,12 +21,12 @@ const userSchema = new Schema(
       required: true,
       minlength: 5,
     },
-    // listings: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: "Listing",
-    //   },
-    // ],
+    listings_id: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Listing",
+      },
+    ],
   },
   {
     toJSON: {

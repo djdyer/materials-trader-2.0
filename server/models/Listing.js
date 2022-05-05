@@ -19,10 +19,18 @@ const listingSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  // contact: {
-  //   type: String,
-  //   required: true,
-  // },
+  materials_Id: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Material'
+    },
+  ],
+  comments_Id: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Comment'
+    },
+  ],
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
