@@ -6,7 +6,7 @@ const typeDefs = gql`
     userName: String!
     email: String!
     password: String!
-    listings: [Listing]
+    listings_id: [Listing]
   }
 
   type Listing {
@@ -14,7 +14,21 @@ const typeDefs = gql`
     description: String
     amount: String
     location: String
-    user: String
+    user_Id: User
+    materials_Id: [Material]
+    comments_Id: [Comment]
+  }
+
+  type Comment {
+    _id: ID!
+    comment: String
+    user_Id: User
+  }
+
+  type Material {
+    _id: ID!
+    material: String
+    hazardous: Boolean
   }
 
   type Auth {
@@ -27,7 +41,7 @@ const typeDefs = gql`
     user(_id: ID!): User
     me: User
     listing(_id: ID!): Listing
-    listings: [Lising]
+    listings: [Listing]
   }
 
   type Checkout {
