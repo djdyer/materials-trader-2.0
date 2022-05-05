@@ -21,7 +21,7 @@ const userSchema = new Schema(
       required: true,
       minlength: 5,
     },
-    listings: [
+    listings_id: [
       {
         type: Schema.Types.ObjectId,
         ref: "Listing",

@@ -25,10 +25,12 @@ const listingSchema = new Schema({
       ref: 'Material'
     },
   ],
-  // contact: {
-  //   type: String,
-  //   required: true,
-  // },
+  comments_Id: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Comment'
+    },
+  ],
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
