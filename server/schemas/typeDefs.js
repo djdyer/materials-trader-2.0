@@ -42,6 +42,7 @@ const typeDefs = gql`
     me: User
     listing(_id: ID!): Listing
     listings: [Listing]
+    comments: [Comment]
   }
 
   type Checkout {

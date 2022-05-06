@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Listing } = require('../models');
+const { User, Listing, Comment } = require('../models');
 
 const { signToken } = require('../utils/auth');
 // const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
@@ -26,15 +26,24 @@ const resolvers = {
         },
         me: async (parent, args, context) => {
             if (context.user) {
-                return await User.findOne({ _id: context.user._id }).populate('winingAuctions').populate('watchlistAuctions');
+                return await User.findOne({ _id: context.user._id }).populate('winingAuctions')
+                .populate('watchlistAuctions');
             }
             throw new AuthenticationError('You need to be logged in!');
         },
         listings: async () => {
-            return await Listing.find({}).populate("materials_Id").populate("comments_Id");
+            return await Listing.find({}).populate("materials_Id")
+            .populate("comments_Id")
+            .populate({path: "comments_Id", populate: {path: "user_Id"}})
+            .populate("user_Id"); 
         },
         listing: async (parent, args) => {
-            return await Listing.findOne({ _id: args._id }).populate("materials_Id").populate("comments_Id");
+            return await Listing.findOne({ _id: args._id }).populate("materials_Id")
+            .populate("comments_Id")
+            .populate("user_Id");
+        },
+        comments: async (parent, args) => {
+            return await Comment.find({}).populate("user_Id");
         },
     },
     Mutation: {
