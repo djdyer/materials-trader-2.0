@@ -1,5 +1,6 @@
 import React from "react";
 import Auth from "../utils/auth";
+import { Link } from "react-router-dom";
 
 const logo = require("../../src/assets/logo.png");
 const user = require("../assets/icons/navigation/profile.png");
@@ -17,41 +18,41 @@ export default function Navigation() {
         <div className="buttons">
           {/* ABOUT BUTTON */}
           <button id="aboutBtn">
-            <a href="/about">
+            <Link to="/about">
               <img id="about-icon" alt="about" src={about} />
               <h3 id="about-text">ABOUT</h3>
-            </a>
+            </Link>
           </button>
 
           {/* HOME BUTTON */}
           <button id="homeBtn">
-            <a href="/">
+            <Link to="/">
               <img id="home-icon" alt="home" src={home} />
               <h3 id="home-text">HOME</h3>
-            </a>
+            </Link>
           </button>
 
           {/* LOGIN/SIGN-UP BUTTON */}
           <button id="loginOrProfileBtn">
             {Auth.loggedIn() ? (
-              <a href="/profile">
+              <Link to="/profile">
                 <img id="profile-icon" alt="profile" src={user} />
                 <h3 id="profile-text">PROFILE</h3>
-              </a>
+              </Link>
             ) : (
-              <a href="/login">
+              <Link to="/login">
                 <img id="profile-icon" alt="profile" src={user} />
                 <h3 id="profile-text">LOGIN</h3>
-              </a>
+              </Link>
             )}
           </button>
 
           {/* SEARCH BUTTON */}
           <button id="searchBtn">
-            <a href="/search">
+            <Link to="/search">
               <img id="search-icon" alt="search" src={search} />
               <h3 id="search-text">SEARCH</h3>
-            </a>
+            </Link>
           </button>
         </div>
       </nav>
